@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+    />
+    <title>Task Master</title>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=fC0N9qKd427jmN3nhS7WbhbijKFM9Y7kZzBULrQ0FnHxYKpj6VtYLGjp42QmqnCUMtjjo4yV6Y2PxdwN9zcIwGZC9RnnBI3sm2ynHmdgZQPa_dcSO9grXBNb7-Zc-fDhk6DMqCL72B-YesqZ0Xp-KCVP0Sou9sRSC4iY4atG1dm6fMCm6vF2gXsr_1FCQWKMUaNhYMrt80Ff_QIZGVvwCpZsZxu9PALbHpyWMN9ZRoQzEr661FWXpiLPMNGTjD6KG3Xa-qP3O0fT70OGbM0ZXaGPC2FjwsmY3clxC5TwYIZdjCYJZhcot7SF4xmbXXTC0VbMNpxRateLrZmnpBhg7QWYD41nULhsGLj7xTnkgZv0b1bJmXMxGJ1Sbag1E--CuIAvOgT924s4qV4P_5hvSgT_sOGanwHVsGL4_Xrj_D1XNewGMAkHP0NH1OzxneIdKdekRUHpnVRYdYF_NBX_23lraozdzXjkN53JXYc_gMEyEI3d-kC75Hx4JEgjjvuKlo1-qdcZ7yWGNjHs4EZ5V43lZRcXOkovdf8PRDzjEQzlNdCEsdufwgac8ZAOkLKP-zuqwGB5K4VzNQCIdTSOMEez4yjjUr-87ohgqq0o9iIz84m2QwNbPYo_1zZiZeQYSLwZ45cVw6xoL1-KXVw-Kt8CxviubUTqv-7PuSSS0y0T6Kz3U05uHgnvKGZOyByjhbaGGKvxX-z6uK5NjZ3X4OyC1rL6eIHW4sdcTh8Q3U6GUxaFta0Wq0DXHOcBOONlD4hbw6eF_DZEqLX_L5ZUvJ_kir_oIUHdvw3T1W9EWUBVlfySAwNrHQ3aNkOmGPnyIG0V-u8AhZFMSNHyLXka-r4bdwrCfEy7q7bi_3Kh2EN-ZR9vngSipPuMOradDkGujLszbPNE99jfG1yj6krEK_EjdcJLlaTlE9ytddM2ym8SkOkZmgJTtZKyLvFmOA0PEX_dlg9HrgM5JG_lPc9mdaaHiJK7xH7Fgjl5EI9EAfoHUeyCUzK97CV6C2o3omYrXHTwTteQbI-8iWjG6Y_r9aucXFZH741h6bEcQhlfpFnlNQdCJRT-knGa7RS75aivkj-1hXyfi1I3uA4WmF3OnTsPXfmGaKjdqn0tDMg_1xPXCfyjA-d-u4-g3-cLNHNllJx_oebpFVSE45xG6Hu6lJv_ZABuqrwiiXC3k_HrVxzBQ4E48ci8YLrIClLDrNKcrTc24zgpgVOPz5sFLch0dg" nonce="3b59120732107361b1351603b6fd380c" charset="UTF-8"></script><style>
+      header {
+        background-color: #708090;
+        padding: 2rem 0 2rem;
+      }
+
+      .head h1 {
+        font-weight: 700;
+        text-transform: uppercase;
+        padding-bottom: 1rem;
+        letter-spacing: 1.5px;
+      }
+
+      .head {
+        color: white;
+      }
+
+      .heading-underline {
+        width: 3rem;
+        height: 0.2rem;
+        background-color: #28b487;
+        margin: 0 auto 1rem;
+      }
+      section {
+        padding: 100px 100px 30px 100px;
+        margin: 0 auto;
+      }
+      .table-section {
+        width: 70%;
+        margin: 0 auto;
+        padding-bottom: 1.5rem;
+      }
+      .table-bordered,
+      tr,
+      th,
+      td {
+        border: 2px solid #17202a !important;
+      }
+      th,
+      td {
+        text-align: center;
+      }
+      #section1 {
+        margin: 0 auto;
+        padding-top: 0;
+        text-align: center;
+        justify-content: center;
+      }
+      .form-inline {
+        justify-content: center;
+      }
+      .btn btn-success{
+          color: white;
+      }
+      .btn btn-danger{
+          color:white;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="row justify-content-center text-center">
+        <div class="col-md-5 head">
+          <h1>Task Master</h1>
+          <div class="heading-underline"></div>
+        </div>
+      </div>
+    </header>
+    <section>
+      {% if tasks|length < 1 %}
+        <h4 style="text-align: center">There are no tasks. Create one below!</h4>
+      {% else %}
+      <div class="table-section">
+        <table class="table table-hover table-bordered">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Task</th>
+              <th scope="col">Added</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for task in tasks %}
+            <tr>
+            <td>{{ task.content }}</td>
+            <td>{{ task.date_created.date() }}</td>
+            <td>
+              <button class="btn btn-success" color=#FFFFFF> <a href="/update/{{task.id}}">Update</a> </button>
+              <button class="btn btn-danger" color=#FFFFFF><a href="/delete/{{task.id}}">Delete</a> </button>
+            </td></tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      {% endif %}
+    </section>
+    <section id="section1">
+      <form class="form-inline" action="/" method="POST">
+        <div class="form-group mx-sm-3 mb-2">
+          <label for="content" class="sr-only">Task</label>
+          <input
+            type="text"
+            class="form-control"
+            name="content"
+            id="content"
+            placeholder="Enter your tasks here..."
+          />
+        </div>
+        <button type="submit" class="btn btn-primary mb-2">Add Task</button>
+      </form>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

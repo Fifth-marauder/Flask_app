@@ -1,0 +1,56 @@
+header {
+    background-color: #708090;
+    padding: 2rem 0 2rem;
+  }
+
+  .head h1 {
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 1rem;
+    letter-spacing: 1.5px;
+  }
+
+  .head {
+    color: white;
+  }
+
+  .heading-underline {
+    width: 3rem;
+    height: 0.2rem;
+    background-color: #28b487;
+    margin: 0 auto 1rem;
+  }
+  section {
+    padding: 100px 100px 30px 100px;
+    margin: 0 auto;
+  }
+  .table-section {
+    width: 70%;
+    margin: 0 auto;
+    padding-bottom: 1.5rem;
+  }
+  .table-bordered,
+  tr,
+  th,
+  td {
+    border: 2px solid #17202a !important;
+  }
+  th,
+  td {
+    text-align: center;
+  }
+  #section1 {
+    margin: 0 auto;
+    padding-top: 0;
+    text-align: center;
+    justify-content: center;
+  }
+  .form-inline {
+    justify-content: center;
+  }
+  .btn btn-success{
+      color: white;
+  }
+  .btn btn-danger{
+      color:white;
+  }
